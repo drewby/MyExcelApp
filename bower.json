@@ -4,6 +4,9 @@
   "dependencies": {
     "microsoft.office.js": "*",
     "jquery": "~1.9.1",
-    "office-ui-fabric": "*"
+    "office-ui-fabric": "*",
+    "d3": "*",
+    "d3-cloud": "*",
+    "amd-d3-cloud": "*"
   }
 }

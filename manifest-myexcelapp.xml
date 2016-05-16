@@ -10,7 +10,7 @@
     <Host Name="Workbook"/>
   </Hosts>
   <DefaultSettings>
-    <SourceLocation DefaultValue="https://localhost:8443/app/home/home.html"/>
+    <SourceLocation DefaultValue="https://drewbymyexcelapp.azurewebsites.net/app/home/home.html"/>
     <RequestedWidth>400</RequestedWidth>
     <RequestedHeight>400</RequestedHeight>
   </DefaultSettings>
