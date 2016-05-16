@@ -24,11 +24,7 @@
               });
             
               d3.layout.cloud().size([300, 300])
-                .words([
-                  "Hello", "world", "normally", "you", "want", "more", "words",
-                  "than", "this"].map(function(d) {
-                  return {text: d, size: 10 + Math.random() * 90};
-                }))
+                .words(words)
                 .padding(5)
                 .rotate(function() { return ~~(Math.random() * 2) * 90; })
                 .font("Impact")
