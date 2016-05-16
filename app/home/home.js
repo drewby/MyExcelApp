@@ -7,7 +7,6 @@
     jQuery(document).ready(function(){
       app.initialize();
       jQuery('#get-data-from-selection').click(getDataFromSelection);
-      jQuery('#content-main').append('div').innerHTML = "Hello world";
     });
   };
 
