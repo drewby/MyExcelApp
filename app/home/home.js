@@ -13,10 +13,15 @@
   // Reads data from current document selection and displays a notification
   function getDataFromSelection(){
     if (Office.context.document.getSelectedDataAsync) {
-      Office.context.document.getSelectedDataAsync(Office.CoercionType.Table,
+      Office.context.document.getSelectedDataAsync(Office.CoercionType.Text,
         function(result){
           if (result.status === Office.AsyncResultStatus.Succeeded) {
             app.showNotification('The selected text is:', '"' + result.value + '"');
+            
+              var words = result.split('\n').map(function(d) {
+                var word = d.split('\t');
+                return {text: word[0], size: word[1]}
+              });
             
               d3.layout.cloud().size([300, 300])
                 .words([
