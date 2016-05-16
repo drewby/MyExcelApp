@@ -18,7 +18,7 @@
           if (result.status === Office.AsyncResultStatus.Succeeded) {
             app.showNotification('The selected text is:', '"' + result.value + '"');
             
-              var words = result.split('\n').map(function(d) {
+              var words = result.value.split('\n').map(function(d) {
                 var word = d.split('\t');
                 return {text: word[0], size: word[1]}
               });
