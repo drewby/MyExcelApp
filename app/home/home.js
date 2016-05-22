@@ -23,12 +23,12 @@
                 return {text: word[0], size: word[1]}
               });
             
-              d3.layout.cloud().size([300, 300])
+              d3.layout.cloud().size([400, 400])
                 .words(words)
                 .padding(5)
                 .rotate(function() { return ~~(Math.random() * 2) * 90; })
                 .font("Impact")
-                .fontSize(function(d) { return d.size; })
+                .fontSize(function(d) { return d.size / 2; })
                 .on("end", draw)
                 .start();
           } else {
@@ -42,9 +42,10 @@
   }
   
   function draw(words) {
+    document.getElementById("content-main").innerHTML = "";
     d3.select("#content-main").append("svg")
-        .attr("width", 300)
-        .attr("height", 300)
+        .attr("width", 400)
+        .attr("height", 400)
       .append("g")
         .attr("transform", "translate(150,150)")
       .selectAll("text")

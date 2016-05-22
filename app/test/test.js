@@ -14,6 +14,7 @@
       .start();
       
   function draw(words) {
+    document.getElementById("content-main").innerHTML = "";
     d3.select("#content-main").append("svg")
         .attr("width", 300)
         .attr("height", 300)
